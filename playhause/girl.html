@@ -1,0 +1,38 @@
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title>赤ちゃんのお世話女の子</title>
+  <style>
+    .overlay{position: absolute; top:80px;}
+    .absoluteleft{position:absolute;top:80px;left:400px;}
+  </style>
+</head><body>
+<h2>赤ちゃんのお世話女の子</h2>
+<div>
+  <img id ="body" class="overlay" src="body.png">
+  <img id ="hair" class="overlay">
+  <img id ="bottom" class="overlay">
+  <img id ="top" class="overlay">
+</div>
+<div class="absoluteleft">
+  <p><button onclick="changeHair()">Hair</button></p>
+  <p><button onclick="changeTop()">Top</button></p>
+  <p><button onclick="changeBottom()">Bottom</button></p>
+</div>
+<script>
+var hairnum = 0;
+var topnum = 0;
+var bottomnum = 0;
+
+function changeHair(){
+  document.getElementById("hair").src="hair"+hairnum+".png";
+  if(++hairnum > 2){ hairnum = 0; }
+}
+function changeTop(){
+  document.getElementById("top").src="top"+topnum+".png";
+  if(++topnum > 2){ topnum = 0; }
+}
+function changeBottom(){
+  document.getElementById("bottom").src="bottom"+bottomnum+".png";
+  if(++bottomnum > 2){ bottomnum = 0; }
+}
+</script></body></html>
